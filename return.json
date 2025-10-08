@@ -1,0 +1,5 @@
+{
+ "ssh_root_disabled": true,
+ "ipv4_redirects": false,
+ "passwordless_accounts": 0
+}

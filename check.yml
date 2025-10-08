@@ -1,0 +1,14 @@
+stages:
+  - hardening
+  - validation
+
+hardening:
+  stage: hardening
+  image: geerlingguy/ansible:latest   # exemplo: container com ansible
+  script:
+    - ansible-playbook playbooks/hardening.yml --limit prod
+  artifacts:
+    paths:
+      - reports/hardening_summary.json
+    expire_in: 7 days
+  tags: [security, compliance]
